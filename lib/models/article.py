@@ -47,6 +47,12 @@ class Article:
     def title(self, value):
         """Set the article title.
 
+        Args:
+            value (str): The title to set.
+
+        Raises:
+            ValueError: If value is not a non-empty string.
+        """
         if not isinstance(value, str) or not value.strip():
             raise ValueError("Title must be a non-empty string")
         self._title = value
